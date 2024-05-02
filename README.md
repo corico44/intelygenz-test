@@ -53,6 +53,10 @@ Several design decisions have been made to keep the application simple and scala
   - The JPA adapter that uses DTO to map between the domain model and the H2 database. MapStruct is used for mapping.
 - **Database:** The database model is designed for the requirements of the task, but additional optimizations could be made to achieve not using an in-memory database.
 
+## Clarification on the return of the endpoint
+
+The endpoint does not return Not Found if it does not find any value in the database since it has been assumed according to the statement that if there is no value in the database, an empty list is returned instead of a not found error.
+
 ## How to test the service
 
 To do this, you must execute the following commands:
