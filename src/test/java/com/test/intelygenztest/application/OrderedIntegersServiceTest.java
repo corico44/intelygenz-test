@@ -1,30 +1,29 @@
 package com.test.intelygenztest.application;
 
 
+import static com.test.intelygenztest.mother.OrderedIntegersObjectMother.getOrderedIntegers;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
 import com.test.intelygenztest.application.port.out.LoadOrderedIntegersByNumberOfOnesInBinaryValuePort;
 import com.test.intelygenztest.domain.OrderedIntegers;
+import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.ArrayList;
-
-import static com.test.intelygenztest.mother.OrderedIntegersObjectMother.getOrderedIntegers;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 
 @ExtendWith(MockitoExtension.class)
 public class OrderedIntegersServiceTest {
 
+    @Mock
     private LoadOrderedIntegersByNumberOfOnesInBinaryValuePort loadOrderedIntegersByNumberOfOnesInBinaryValuePort;
     private OrderedIntegersService orderedIntegersService;
 
     @BeforeEach
     void setUp() {
-        this.loadOrderedIntegersByNumberOfOnesInBinaryValuePort = mock(LoadOrderedIntegersByNumberOfOnesInBinaryValuePort.class);
         this.orderedIntegersService = new OrderedIntegersService(loadOrderedIntegersByNumberOfOnesInBinaryValuePort);
     }
 
