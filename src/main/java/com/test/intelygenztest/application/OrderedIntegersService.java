@@ -3,8 +3,10 @@ package com.test.intelygenztest.application;
 import com.test.intelygenztest.application.port.in.GetOrderedIntegersByNumberOfOnesInBinaryValueUseCase;
 import com.test.intelygenztest.application.port.out.LoadOrderedIntegersByNumberOfOnesInBinaryValuePort;
 import com.test.intelygenztest.domain.OrderedIntegers;
+import org.springframework.stereotype.Component;
 
-public class OrderedIntegersService implements GetOrderedIntegersByNumberOfOnesInBinaryValueUseCase {
+@Component
+class OrderedIntegersService implements GetOrderedIntegersByNumberOfOnesInBinaryValueUseCase {
 
 
     private final LoadOrderedIntegersByNumberOfOnesInBinaryValuePort loadOrderedIntegersByNumberOfOnesInBinaryValuePort;

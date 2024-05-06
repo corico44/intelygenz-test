@@ -6,8 +6,10 @@ import com.test.intelygenztest.infrastructure.adapter.out.jpa.dto.OrderedInteger
 import com.test.intelygenztest.infrastructure.adapter.out.jpa.mapper.OrderedIntegersJPADTOMapper;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 
-public class OrderedIntegersAdapter implements LoadOrderedIntegersByNumberOfOnesInBinaryValuePort {
+@Component
+class OrderedIntegersAdapter implements LoadOrderedIntegersByNumberOfOnesInBinaryValuePort {
 
     private final OrderedIntegersRepository orderedIntegersRepository;
     private final OrderedIntegersJPADTOMapper orderedIntegersJPADTOMapper;
