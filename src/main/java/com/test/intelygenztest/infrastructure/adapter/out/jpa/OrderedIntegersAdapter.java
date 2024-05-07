@@ -6,16 +6,14 @@ import com.test.intelygenztest.infrastructure.adapter.out.jpa.dto.OrderedInteger
 import com.test.intelygenztest.infrastructure.adapter.out.jpa.mapper.OrderedIntegersJPADTOMapper;
 
 import java.util.List;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public class OrderedIntegersAdapter implements LoadOrderedIntegersByNumberOfOnesInBinaryValuePort {
 
     private final OrderedIntegersRepository orderedIntegersRepository;
-    private final OrderedIntegersJPADTOMapper orderedIntegersJPADTOMapper;
 
-    public OrderedIntegersAdapter(OrderedIntegersRepository orderedIntegersRepository, OrderedIntegersJPADTOMapper orderedIntegersJPADTOMapper) {
-        this.orderedIntegersRepository = orderedIntegersRepository;
-        this.orderedIntegersJPADTOMapper = orderedIntegersJPADTOMapper;
-    }
+    private final OrderedIntegersJPADTOMapper orderedIntegersJPADTOMapper;
 
     @Override
     public OrderedIntegers loadNumbersByNumberOfOnesInBinaryValue() {

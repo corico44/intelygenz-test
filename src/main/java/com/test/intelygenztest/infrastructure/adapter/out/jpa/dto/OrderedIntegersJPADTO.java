@@ -4,7 +4,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor  // Required by JPA
 @Entity
 @Table(name = "NUMBER_VALUES")
 public class OrderedIntegersJPADTO {
@@ -15,29 +23,4 @@ public class OrderedIntegersJPADTO {
 
     @Column(name = "NUMBER")
     private Integer number;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
-    }
-
-    public OrderedIntegersJPADTO(Long id, Integer number) {
-        this.id = id;
-        this.number = number;
-    }
-
-    public OrderedIntegersJPADTO() {
-        // Required by JPA
-    }
 }
