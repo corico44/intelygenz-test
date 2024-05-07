@@ -9,7 +9,7 @@ import java.util.List;
 
 public class OrderedIntegersObjectMother {
 
-    public static final String ORDERED_INTEGERS_RESOURCES = "/orderedIntegersByBinaryValue";
+    public static final String ORDERED_INTEGERS_RESOURCES = "orderedIntegersByBinaryValue";
 
     public static OrderedIntegers getOrderedIntegers() {
         List<Integer> orderedIntegers = new ArrayList<>();
