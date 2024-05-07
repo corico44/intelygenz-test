@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "OrderedIntegers", description = "Endpoints for ordered integers")
-public class OrderedIntegersController {
+class OrderedIntegersController {
 
     private final GetOrderedIntegersByNumberOfOnesInBinaryValueUseCase getOrderedIntegersByNumberOfOnesInBinaryValueUseCase;
 
